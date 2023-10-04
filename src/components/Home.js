@@ -1,25 +1,54 @@
-import React from "react";
+import React, { useEffect, useRef } from "react";
+import lottie from "lottie-web";
+import "../index.css";
 
 const Home = () => {
-    const redirectToGithub = () => {
-        window.open('https://github.com/HaMza0718', '_blank');
-      };
+  
+  const container = useRef(null);
+
+  useEffect(() => {
+    lottie.loadAnimation({
+      container: container.current,
+      renderer: "svg",
+      loop: true,
+      autoplay: true,
+      animationData: require("../data/heroImg.json"),
+      rendererSettings: {
+        scaleMode: "noScale",
+        progressiveLoad: false, // Boolean, only svg renderer, loads dom elements when needed. Might speed up initialization for large number of elements.
+        hideOnTransparent: true, //Boolean, only svg renderer, hides elements when opacity reaches 0 (defaults to true)
+      },
+    });
+    return () => {
+      lottie.destroy();
+    };
+  }, []);
+
+  const redirectToGithub = () => {
+    window.open("https://github.com/HaMza0718", "_blank");
+  };
   return (
     <div
       name="home"
       className="h-screen w-full bg-gradient-to-b from-black to-gray-800"
     >
       <div className="max-w-screen-lg mx-auto flex flex-col items-center justify-center h-full px-4 md:flex-row">
-        <div className="flex flex-col justify-center h-full">
-          <h2 className="text-4xl sm:text-5xl font-bold text-white font-signature">Hi! I'm a Frontend Developer</h2>
-          <p className="text-gray-400 py-4 max-w-lg">
+        <div className="flex flex-col justify-center py-7">
+          <h2 className="text-2xl sm:text-5xl font-bold text-white font-signature">
+            Hi! I'm a Frontend Developer
+          </h2>
+          <p className="text-gray-400 py-4 max-w text-xs sm:text-base">
             Welcome to my portfolio! As a frontend developer, I specialize in
-            creating captivating and user-friendly web experiences.<br />Explore my
-            work to see how I blend design and code to craft visually stunning
-            and responsive websites.
+            creating captivating and user-friendly web experiences.
+            <br />
+            Explore my work to see how I blend design and code to craft visually
+            stunning and responsive websites.
           </p>
-          <div>
-            <button onClick={redirectToGithub} className="flex gap-3 cursor-pointer text-white font-semibold bg-gradient-to-r from-gray-800 to-black px-7 py-3 rounded-full border border-gray-600 hover:scale-105 duration-200 hover:text-gray-500 hover:border-gray-800 hover:from-black hover:to-gray-900">
+          <div className="gitBtn">
+            <button
+              onClick={redirectToGithub}
+              className="flex gap-3 cursor-pointer text-white font-semibold bg-gradient-to-r from-gray-800 to-black px-7 py-3 rounded-full border border-gray-600 hover:scale-105 duration-200 hover:text-gray-500 hover:border-gray-800 hover:from-black hover:to-gray-900"
+            >
               <svg
                 viewBox="0 0 24 24"
                 height="24"
@@ -34,6 +63,8 @@ const Home = () => {
               Github
             </button>
           </div>
+        </div>
+        <div className="container mx-auto w-2/3 md:w-2/3" ref={container}>
         </div>
       </div>
     </div>

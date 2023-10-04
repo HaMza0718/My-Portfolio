@@ -27,9 +27,9 @@ const Header = () => {
     },
   ];
   return (
-    <div className="flex justify-between items-center w-full h-20 px-4 text-white bg-black fixed">
+    <div className="flex justify-between items-center w-full h-16 px-4 text-white bg-gradient-to-b from-black to-gray-900 fixed">
       <div>
-        <h1 className="text-3xl ml-2 font-signature cursor-context-menu hover:scale-75">
+        <h1 className="text-2xl sm:text-3xl ml-2 font-signature cursor-context-menu hover:scale-75">
           Hamza
         </h1>
       </div>
@@ -44,7 +44,7 @@ const Header = () => {
         onClick={() => setNav(!nav)}
         className="cursor-pointer pr-1 z-10 text-gray-300 md:hidden"
       >
-        {nav ? <FaTimes size={30} /> : <FaBars size={30} />}
+        {nav ? <FaTimes size={25} /> : <FaBars size={25} />}
       </div>
 
       {nav && (
