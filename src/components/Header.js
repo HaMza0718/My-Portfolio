@@ -48,9 +48,9 @@ const Header = () => {
       </div>
 
       {nav && (
-        <ul className="flex flex-col justify-center items-center absolute top-4 left-0 w-full h-screen bg-gradient-to-b from-black to-gray-800 text-gray-300">
+        <ul className="flex flex-col justify-center items-center absolute top-6 right-2 bg-gradient-to-b from-black to-gray-800 text-gray-300 rounded-2xl">
           {links.map(({ id, link }) => (
-            <li className="px-4 cursor-pointer capitalize py-6 text-4xl">
+            <li className="px-8 cursor-pointer capitalize py-4 text-3xl sm:text-4xl">
               {link}
             </li>
           ))}

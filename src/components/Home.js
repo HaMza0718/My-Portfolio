@@ -32,8 +32,8 @@ const Home = () => {
       name="home"
       className="h-screen w-full bg-gradient-to-b from-black to-gray-800"
     >
-      <div className="max-w-screen-lg mx-auto flex flex-col items-center justify-center h-full px-4 md:flex-row">
-        <div className="flex flex-col justify-center py-7">
+      <div className="max-w-screen-lg mx-auto flex flex-col items-center justify-center h-full pt-16 sm:pt-20 md:flex-row">
+        <div className="flex flex-col justify-center py-7 mt-28">
           <h2 className="text-2xl sm:text-5xl font-bold text-white font-signature">
             Hi! I'm a Frontend Developer
           </h2>
