@@ -15,43 +15,43 @@ const Skills = () => {
       id: 1,
       src: html,
       title: "HTML",
-      style: "shadow-orange-500",
+      style: "shadow-orange-700",
     },
     {
       id: 2,
       src: css,
       title: "CSS",
-      style: "shadow-blue-500",
+      style: "shadow-blue-600",
     },
     {
       id: 3,
       src: bootstrap,
       title: "Bootstrap",
-      style: "shadow-purple-700",
+      style: "shadow-purple-600",
     },
     {
       id: 4,
       src: tailwind,
       title: "Tailwind",
-      style: "shadow-sky-400",
+      style: "shadow-cyan-700",
     },
     {
       id: 5,
       src: javaScript,
       title: "Javascript",
-      style: "shadow-yellow-500",
+      style: "shadow-yellow-600",
     },
     {
       id: 6,
       src: react,
       title: "React JS",
-      style: "shadow-blue-600",
+      style: "shadow-cyan-500",
     },
     {
       id: 7,
       src: next,
       title: "Next JS",
-      style: "shadow-white",
+      style: "shadow-gray-300",
     },
     {
       id: 8,
@@ -71,7 +71,7 @@ const Skills = () => {
       name="skills"
       className="bg-gradient-to-b from-black to-gray-800 w-full"
     >
-      <div className="max-w-screen-lg mx-auto p-4 flex flex-col justify-center w-full">
+      <div className="max-w-screen-xl mx-auto p-4 sm:px-16 flex flex-col justify-center w-full">
         <div>
           <p className="text-3xl sm:text-4xl text-white font-bold inline border-b-4 border-gray-600">
             Skills

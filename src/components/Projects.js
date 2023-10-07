@@ -49,18 +49,18 @@ const Projects = () => {
   return (
     <div
       name="projects"
-      className="bg-gradient-to-b from-gray-800 to-black w-full overflow-y-auto sm:max-h-screen"
+      className="bg-gradient-to-b from-gray-800 to-black w-full sm:max-h-screen"
     >
-      <div className="max-w-screen-lg p-4 mx-auto flex flex-col justify-center w-full">
-        <div className="pb-8">
+      <div className="max-w-screen-xl sm:px-16 p-4 mx-auto flex flex-col justify-center w-full">
+        <div className="pb-4">
           <p className="text-3xl sm:text-4xl text-white font-bold inline border-b-4 border-gray-600">
             Projects
           </p>
           <p className="py-6 text-gray-400">Explore some of my work here.</p>
         </div>
-        <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-8 px-12 sm:px-6 ">
+        <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-8 px-12 sm:px-6">
           {projects.map(({ id, src, demo, code }) => (
-            <div key={id} className="shadow-md shadow-gray-700 rounded-lg">
+            <div key={id} className="shadow-lg shadow-gray-800 rounded-lg">
               <img
                 src={src}
                 alt=""
@@ -69,7 +69,7 @@ const Projects = () => {
               <div className="flex items-center justify-center">
                 <a
                   href={demo}
-                  className="w-1/2 px-6 py-3 bg-black h-[50px] m-4 flex items-center justify-center rounded-xl cursor-pointer overflow-hidden transition-all duration-500 ease-in-out shadow-md hover:scale-105 hover:shadow-lg before:absolute before:top-0 before:-left-full before:w-full before:h-full before:bg-gradient-to-r before:from-[#011231] before:to-[rgb(129,175,216)] before:transition-all before:duration-500 before:ease-in-out before:z-[-1] before:rounded-xl hover:before:left-0 text-[#fff]"
+                  className="border-t-2 border-b-2 w-1/2 px-6 py-3 bg-black h-[50px] m-4 flex items-center justify-center rounded-xl cursor-pointer overflow-hidden transition-all duration-500 ease-in-out shadow-md hover:scale-105 hover:shadow-lg before:absolute before:top-0 before:-left-full before:w-full before:h-full before:bg-gradient-to-r before:from-[#011231] before:to-[rgb(129,175,216)] before:transition-all before:duration-500 before:ease-in-out before:z-[-1] before:rounded-xl hover:before:left-0 text-[#fff]"
                   target="_blank"
                   rel="noreferrer"
                 >
@@ -79,7 +79,7 @@ const Projects = () => {
                   href={code}
                   target="_blank"
                   rel="noreferrer"
-                  className="w-1/2 px-6 py-3 bg-black h-[50px] m-4 flex items-center justify-center rounded-xl cursor-pointer overflow-hidden transition-all duration-500 ease-in-out shadow-md hover:scale-105 hover:shadow-lg before:absolute before:top-0 before:-left-full before:w-full before:h-full before:bg-gradient-to-r before:from-[#011231] before:to-[rgb(129,175,216)] before:transition-all before:duration-500 before:ease-in-out before:z-[-1] before:rounded-xl hover:before:left-0 text-[#fff]"
+                  className="border-b-2 border-t-2 w-1/2 px-6 py-3 bg-black h-[50px] m-4 flex items-center justify-center rounded-xl cursor-pointer overflow-hidden transition-all duration-500 ease-in-out shadow-md hover:scale-105 hover:shadow-lg before:absolute before:top-0 before:-left-full before:w-full before:h-full before:bg-gradient-to-r before:from-[#011231] before:to-[rgb(129,175,216)] before:transition-all before:duration-500 before:ease-in-out before:z-[-1] before:rounded-xl hover:before:left-0 text-[#fff]"
                 >
                   Code
                 </a>

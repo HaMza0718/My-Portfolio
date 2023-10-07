@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { FaBars, FaTimes } from "react-icons/fa";
+import { Link } from "react-scroll";
 
 const Header = () => {
   const [nav, setNav] = useState(false);
@@ -15,11 +16,11 @@ const Header = () => {
     },
     {
       id: 3,
-      link: "projects",
+      link: "skills",
     },
     {
       id: 4,
-      link: "skills",
+      link: "projects",
     },
     {
       id: 5,
@@ -36,7 +37,9 @@ const Header = () => {
       <ul className="hidden md:flex">
         {links.map(({ id, link }) => (
           <li className="px-4 cursor-pointer capitalize font-medium text-gray-300 hover:scale-105 duration-200">
-            {link}
+            <Link to={link} smooth duration={500}>
+              {link}
+            </Link>
           </li>
         ))}
       </ul>
@@ -51,7 +54,14 @@ const Header = () => {
         <ul className="flex flex-col justify-center items-center absolute top-6 right-2 bg-gradient-to-b from-black to-gray-800 text-gray-300 rounded-2xl">
           {links.map(({ id, link }) => (
             <li className="px-8 cursor-pointer capitalize py-4 text-3xl sm:text-4xl">
-              {link}
+              <Link
+                onClick={() => setNav(!nav)}
+                to={link}
+                smooth
+                duration={500}
+              >
+                {link}
+              </Link>
             </li>
           ))}
         </ul>
