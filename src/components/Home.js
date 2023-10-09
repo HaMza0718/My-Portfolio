@@ -33,18 +33,19 @@ const Home = () => {
       className="h-screen w-full bg-gradient-to-b from-black to-gray-800"
     >
       <div className="max-w-screen-lg mx-auto flex flex-col items-center justify-center h-full pt-16 sm:pt-20 md:flex-row">
-        <div className="flex flex-col justify-center py-7 mt-28">
-          <h2 className="text-2xl sm:text-5xl font-bold text-white font-signature">
-            Hi! I'm a Frontend Developer
+        <div className="flex flex-col justify-center py-7 -mt-24">
+          <h2 className="text-2xl sm:text-5xl font-bold text-white font-signature px-4 md:px-0">
+            Hi! I'm Hamza Yasir
           </h2>
-          <p className="text-gray-400 py-4 max-w text-xs sm:text-base">
+          <h2 className="text-2xl sm:text-3xl font-bold text-white pt-3 px-4 md:px-0">Frontend Web Developer</h2>
+          <p className="text-gray-400 py-4 px-4 md:px-0 max-w text-xs sm:text-base">
             Welcome to my portfolio! As a frontend developer, I specialize in
             creating captivating and user-friendly web experiences.
             <br />
             Explore my work to see how I blend design and code to craft visually
             stunning and responsive websites.
           </p>
-          <div className="gitBtn">
+          <div className="px-4 md:px-0">
             <button
               onClick={redirectToGithub}
               className="flex gap-3 cursor-pointer text-white font-semibold bg-gradient-to-r from-gray-800 to-black px-7 py-3 rounded-full border border-gray-600 hover:scale-105 duration-200 hover:text-gray-500 hover:border-gray-800 hover:from-black hover:to-gray-900"

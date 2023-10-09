@@ -6,21 +6,21 @@ const Contact = () => {
   return (
     <div
       name="contact"
-      className="w-full h-screen bg-gradient-to-b from-black to-gray-800"
-    >
+      className="pt-10 w-full h-screen bg-gradient-to-b from-black to-gray-800">
       <div className="max-w-screen-xl p-4 sm:px-16 mx-auto flex flex-col justify-center w-full h-full">
         <div className="pb-2">
           <p className="text-3xl sm:text-4xl text-white font-bold inline border-b-4 border-gray-600">
             Contact
           </p>
+          <p className="mt-6 text-xl text-gray-500">Easy to communicate.</p>
           <div className="flex flex-col lg:flex-row">
             <div className="flex-1">
-              <div className="cont-img py-10 pr-0 md:pr-6">
+              <div className="cont-img py-8 pr-0 md:pr-6">
                 <div className="img-box">
                   <p>
                     Get in touch!
                   </p>
-                  <img src={contact} alt=""/>
+                  <img className="rounded-2xl" src={contact} alt=""/>
                 </div>
               </div>
             </div>
