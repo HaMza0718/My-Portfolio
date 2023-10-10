@@ -1,8 +1,8 @@
 import React, { useEffect, useRef } from "react";
 import lottie from "lottie-web";
 import "../index.css";
-import Typical from "react-typical";
 import { motion } from "framer-motion";
+import {useTypewriter, Cursor} from 'react-simple-typewriter'
 
 const Home = () => {
 
@@ -29,6 +29,12 @@ const Home = () => {
   const redirectToGithub = () => {
     window.open("https://github.com/HaMza0718", "_blank");
   };
+  const [typeEffect] = useTypewriter({
+    words: ['Hi! Im Hamza Yasir,', 'Frontend Web Developer.'],
+    loop:{},
+    typeSpeed:60,
+    deleteSpeed:50,
+  })
   return (
     <div
       name="home"
@@ -37,11 +43,7 @@ const Home = () => {
       <div className="max-w-screen-lg mx-auto flex flex-col items-center justify-center h-full pt-16 sm:pt-20 md:flex-row">
         <div className="flex flex-col justify-center py-7 -mt-24">
           <h2 className="text-2xl sm:text-5xl font-bold text-white font-signature px-4 md:px-0">
-            <Typical
-              steps={['Hi! Im Hamza Yasir,', 1000, 'Frontend Web Developer.', 500]}
-              loop={Infinity}
-              wrapper="p"
-            />
+            {typeEffect}<Cursor />
           </h2>
           <p className="text-gray-400 py-4 px-4 md:px-0 max-w text-xs sm:text-base">
             Welcome to my portfolio! As a frontend developer, I specialize in

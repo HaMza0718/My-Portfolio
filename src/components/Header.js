@@ -36,7 +36,7 @@ const Header = () => {
       </div>
       <ul className="hidden md:flex">
         {links.map(({ id, link }) => (
-          <li className="px-4 cursor-pointer capitalize font-medium text-gray-300 hover:scale-105 hover:text-white duration-200">
+          <li key={id} className="px-4 cursor-pointer capitalize font-medium text-gray-300 hover:scale-105 hover:text-white duration-200">
             <Link to={link} smooth duration={500}>
               {link}
             </Link>
@@ -49,11 +49,10 @@ const Header = () => {
       >
         {nav ? <FaTimes size={25} /> : <FaBars size={25} />}
       </div>
-
       {nav && (
         <ul className="flex flex-col justify-center items-center absolute top-5 right-5 bg-gradient-to-t from-gray-800 to-black text-gray-300 rounded-xl">
           {links.map(({ id, link }) => (
-            <li className="px-8 cursor-pointer capitalize py-4 text-3xl sm:text-4xl">
+            <li key={id} className="px-8 cursor-pointer capitalize py-4 text-3xl sm:text-4xl">
               <Link
                 onClick={() => setNav(!nav)}
                 to={link}

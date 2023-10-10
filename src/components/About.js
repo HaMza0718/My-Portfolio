@@ -76,7 +76,7 @@ const About = () => {
               </div>
             </div>
             <motion.div
-              initial={{ opacity: 0, x: "7rem" }}
+              initial={{ opacity: 0, x: 0 }}
               animate={controls}
               exit={{ opacity: 0, x: 0 }}
               transition={{ duration: 2 }}
