@@ -1,9 +1,11 @@
 import React, { useEffect, useRef } from "react";
 import lottie from "lottie-web";
 import "../index.css";
+import Typical from "react-typical";
+import { motion } from "framer-motion";
 
 const Home = () => {
-  
+
   const container = useRef(null);
 
   useEffect(() => {
@@ -15,8 +17,8 @@ const Home = () => {
       animationData: require("../data/heroImg.json"),
       rendererSettings: {
         scaleMode: "noScale",
-        progressiveLoad: false, // Boolean, only svg renderer, loads dom elements when needed. Might speed up initialization for large number of elements.
-        hideOnTransparent: true, //Boolean, only svg renderer, hides elements when opacity reaches 0 (defaults to true)
+        progressiveLoad: false,
+        hideOnTransparent: true,
       },
     });
     return () => {
@@ -35,9 +37,12 @@ const Home = () => {
       <div className="max-w-screen-lg mx-auto flex flex-col items-center justify-center h-full pt-16 sm:pt-20 md:flex-row">
         <div className="flex flex-col justify-center py-7 -mt-24">
           <h2 className="text-2xl sm:text-5xl font-bold text-white font-signature px-4 md:px-0">
-            Hi! I'm Hamza Yasir
+            <Typical
+              steps={['Hi! Im Hamza Yasir,', 1000, 'Frontend Web Developer.', 500]}
+              loop={Infinity}
+              wrapper="p"
+            />
           </h2>
-          <h2 className="text-2xl sm:text-3xl font-bold text-white pt-3 px-4 md:px-0">Frontend Web Developer</h2>
           <p className="text-gray-400 py-4 px-4 md:px-0 max-w text-xs sm:text-base">
             Welcome to my portfolio! As a frontend developer, I specialize in
             creating captivating and user-friendly web experiences.
@@ -65,8 +70,12 @@ const Home = () => {
             </button>
           </div>
         </div>
-        <div className="container mx-auto w-2/3 md:w-2/3" ref={container}>
-        </div>
+        <motion.div
+          initial={{ x: "7rem", opacity: 0 }}
+          animate={{ x: 0, opacity: 1 }}
+          transition={{ duration: 2, type: "tween" }}
+          className="container mx-auto w-2/3 md:w-2/3" ref={container}>
+        </motion.div>
       </div>
     </div>
   );

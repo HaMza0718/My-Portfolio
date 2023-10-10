@@ -76,7 +76,7 @@ const Skills = () => {
           <p className="text-3xl sm:text-4xl text-white font-bold inline border-b-4 border-gray-600">
             Skills
           </p>
-          <p className="py-6 text-xl text-gray-500">
+          <p className="py-6 text-xl text-gray-400">
             I like to craft aesthetic user experience using modern frontend technologies.
           </p>
         </div>

@@ -34,7 +34,7 @@ const Footer = () => {
           <p className="text-3xl sm:text-4xl text-white font-bold inline border-b-4 border-gray-600">
             Follow
           </p>
-		  <p className="mt-6 text-xl text-gray-500">Feel free to connect on social media.</p>
+		  <p className="mt-6 text-xl text-gray-400">Feel free to connect on social media.</p>
 		  <div className="flex flex-col md:flex-row justify-between items-start md:items-center">
           <div className="font-general-regular flex flex-col justify-center items-center">
             <ul className="pt-8 flex gap-4 sm:gap-8">

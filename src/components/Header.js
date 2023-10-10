@@ -28,7 +28,7 @@ const Header = () => {
     },
   ];
   return (
-    <div className="flex justify-between items-center w-full h-16 px-4 text-white bg-gradient-to-b from-black to-gray-900 fixed">
+    <div className="flex justify-between items-center w-full h-16 px-4 text-white bg-gradient-to-b from-black to-gray-900 fixed z-50">
       <div>
         <h1 className="text-3xl sm:text-3xl ml-2 font-signature cursor-context-menu hover:scale-75">
           H..Y
@@ -51,7 +51,7 @@ const Header = () => {
       </div>
 
       {nav && (
-        <ul className="flex flex-col justify-center items-center absolute top-5 right-2 bg-gradient-to-b from-black to-gray-800 text-gray-300 rounded-2xl">
+        <ul className="flex flex-col justify-center items-center absolute top-5 right-5 bg-gradient-to-t from-gray-800 to-black text-gray-300 rounded-xl">
           {links.map(({ id, link }) => (
             <li className="px-8 cursor-pointer capitalize py-4 text-3xl sm:text-4xl">
               <Link

@@ -56,7 +56,7 @@ const Projects = () => {
           <p className="text-3xl sm:text-4xl text-white font-bold inline border-b-4 border-gray-600">
             Projects
           </p>
-          <p className="py-6 text-xl text-gray-500">Somethings I've built with love, expertise and a pinch of magical ingredients.</p>
+          <p className="py-6 text-xl text-gray-400">Somethings I've built with love, expertise and a pinch of magical ingredients.</p>
         </div>
         <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-8 px-12 sm:px-6">
           {projects.map(({ id, src, demo, code }) => (
@@ -64,7 +64,7 @@ const Projects = () => {
               <img
                 src={src}
                 alt=""
-                className="rounded-md duration-500 hover:scale-105"
+                className="rounded-md duration-500 hover:scale-95"
               />
               <div className="flex items-center justify-center">
                 <a
