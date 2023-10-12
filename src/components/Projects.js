@@ -49,18 +49,18 @@ const Projects = () => {
   return (
     <div
       name="projects"
-      className="bg-gradient-to-b from-gray-800 to-black w-full sm:max-h-screen"
+      className="w-full md:h-screen projects"
     >
-      <div className="max-w-screen-xl sm:px-16 p-4 mx-auto flex flex-col justify-center w-full">
+      <div className="max-w-screen-xl p-0 sm:p-4 mx-auto flex flex-col justify-center w-full h-full">
         <div className="pb-4">
           <p className="text-3xl sm:text-4xl text-white font-bold inline border-b-4 border-gray-600">
             Projects
           </p>
           <p className="py-6 text-xl text-gray-400">Somethings I've built with love, expertise and a pinch of magical ingredients.</p>
         </div>
-        <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-8 px-12 sm:px-6">
+        <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-8 mx-auto px-12 sm:px-0">
           {projects.map(({ id, src, demo, code }) => (
-            <div key={id} className="shadow-lg shadow-gray-800 rounded-lg">
+            <div key={id} className="shadow-md shadow-gray-800 rounded-lg">
               <img
                 src={src}
                 alt=""

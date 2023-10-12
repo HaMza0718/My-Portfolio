@@ -10,7 +10,7 @@ const About = () => {
       if (window.scrollY > 100) {
         controls.start({ opacity: 1, x: 0 });
       } else {
-        controls.start({ opacity: 0, x: -"4rem" });
+        controls.start({ opacity: 0, x: "4rem" });
       }
     };
 
@@ -24,7 +24,7 @@ const About = () => {
   return (
     <div
       name="about"
-      className="w-full h-screen bg-gradient-to-b from-gray-800 to-black"
+      className="w-full h-100 about"
     >
       <div className="max-w-screen-xl p-4 sm:px-16 mx-auto flex flex-col justify-center w-full h-full">
         <div className="pb-3">

@@ -10,7 +10,7 @@ const Contact = () => {
       if (window.scrollY > 100) {
         controls.start({ opacity: 1, x: 0 });
       } else {
-        controls.start({ opacity: 0, x: -"4rem" });
+        controls.start({ opacity: 0, x: "4rem" });
       }
     };
 
@@ -24,7 +24,7 @@ const Contact = () => {
   return (
     <div
       name="contact"
-      className="pt-14 w-full h-screen bg-gradient-to-b from-black to-gray-800"
+      className="w-full h-screen contact"
     >
       <div className="max-w-screen-xl p-4 sm:px-16 mx-auto flex flex-col justify-center w-full h-full">
         <div className="pb-2">
@@ -32,7 +32,7 @@ const Contact = () => {
             Contact
           </p>
           <p className="mt-6 text-xl text-gray-400">Easy to communicate.</p>
-          <div className="flex flex-col lg:flex-row">
+          <div className="flex flex-col md:flex-row">
             <div
               className="flex-1"
             >
@@ -77,7 +77,7 @@ const Contact = () => {
               ></textarea>
               <button className="bg-neutral-950 text-gray-200 border border-neutral-400 border-b-4 font-medium overflow-hidden px-6 py-2 rounded-md hover:brightness-150 hover:border-t-4 hover:border-b active:opacity-75 outline-none duration-300 group">
                 <span className="bg-neutral-400 shadow-neutral-400 absolute -top-[150%] left-0 inline-flex w-80 h-[5px] rounded-md opacity-50 group-hover:top-[150%] duration-500 shadow-[0_0_10px_10px_rgba(0,0,0,0.3)]"></span>
-                Submit
+                Send Message
               </button>
             </motion.form>
           </div>

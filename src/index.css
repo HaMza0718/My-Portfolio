@@ -5,31 +5,44 @@
 @tailwind components;
 @tailwind utilities;
 
-@layer base{
-    html{
+@layer base {
+    html {
         font-family: 'Poppins', sans-serif;
     }
 }
 
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     scroll-behavior: smooth;
 }
+
+#root {
+    min-height: 100vh;
+    background: linear-gradient(to bottom, #1f2a35, #000000);
+}
+
+body {
+    background: rgb(31, 44, 61)
+}
+
 /* animation key */
-@keyframes spin01{
-    0%{
+@keyframes spin01 {
+    0% {
         transform: rotate(0deg);
     }
-    100%{
+
+    100% {
         transform: rotate(360deg);
     }
 }
-.cont-img>.img-box{
+
+.cont-img>.img-box {
     position: relative;
 }
-.cont-img>.img-box::before{
+
+.cont-img>.img-box::before {
     content: '';
     position: absolute;
     height: 100px;
@@ -39,16 +52,57 @@
     top: calc(50% - 50px);
     animation: spin01 10s linear infinite;
 }
-.cont-img >.img-box p{
+
+.cont-img>.img-box p {
     position: absolute;
     left: 22%;
     top: 50%;
     width: 100%;
     max-width: 250px;
     text-align: center;
-    transform: translate(-50%,-50%);
+    transform: translate(-50%, -50%);
     font-size: 35px;
-    font-family: 'Great Vibes', cursive;;
+    font-family: 'Great Vibes', cursive;
     font-weight: bold;
     color: white;
+}
+
+.about,
+.contact {
+    overflow: hidden;
+}
+
+.projects,
+.contact {
+    margin-top: 8%;
+
+}
+
+.skills {
+    margin-top: 12%;
+}
+
+@media screen and (max-width: 900px) {
+
+    #root {
+        min-height: 100vh;
+    }
+
+    .about,
+    .contact,
+    .projects,
+    .skills,
+    .home,
+    .footer {
+        height: 100%;
+    }
+
+    .home{
+        padding-top: 30%;
+    }
+    .about,
+    .projects,
+    .skills {
+        margin-top: 10%;
+    }
 }

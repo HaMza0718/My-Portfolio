@@ -38,14 +38,14 @@ const Home = () => {
   return (
     <div
       name="home"
-      className="h-screen w-full bg-gradient-to-b from-black to-gray-800"
+      className="h-screen w-full home"
     >
-      <div className="max-w-screen-lg mx-auto flex flex-col items-center justify-center h-full pt-16 sm:pt-20 md:flex-row">
-        <div className="flex flex-col justify-center py-7 -mt-24">
-          <h2 className="text-2xl sm:text-5xl font-bold text-white font-signature px-4 md:px-0">
+      <div className="max-w-screen-lg mx-auto flex flex-col items-center justify-center h-full px-4 md:flex-row">
+        <div className="flex flex-col justify-center h-full">
+          <h2 className="text-3xl sm:text-5xl font-bold text-white font-signature px-4 md:px-0">
             {typeEffect}<Cursor />
           </h2>
-          <p className="text-gray-400 py-4 px-4 md:px-0 max-w text-xs sm:text-base">
+          <p className="text-gray-400 py-4 px-4 md:px-0 max-w text-base sm:text-base">
             Welcome to my portfolio! As a frontend developer, I specialize in
             creating captivating and user-friendly web experiences.
             <br />
@@ -76,7 +76,7 @@ const Home = () => {
           initial={{ x: "7rem", opacity: 0 }}
           animate={{ x: 0, opacity: 1 }}
           transition={{ duration: 2, type: "tween" }}
-          className="container mx-auto w-2/3 md:w-2/3" ref={container}>
+          className="container mx-auto w-2/3 md:full" ref={container}>
         </motion.div>
       </div>
     </div>

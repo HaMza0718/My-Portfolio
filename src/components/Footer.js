@@ -28,28 +28,30 @@ const Footer = () => {
     },
   ];
   return (
-    <div className="w-full h-screen bg-gradient-to-b from-gray-800 to-black">
+    <div className="w-full footer">
       <div className="max-w-screen-xl p-4 sm:px-16 mx-auto flex flex-col justify-center w-full h-full">
         <div className="pb-2">
           <p className="text-3xl sm:text-4xl text-white font-bold inline border-b-4 border-gray-600">
             Follow
           </p>
-		  <p className="mt-6 text-xl text-gray-400">Feel free to connect on social media.</p>
-		  <div className="flex flex-col md:flex-row justify-between items-start md:items-center">
-          <div className="font-general-regular flex flex-col justify-center items-center">
-            <ul className="pt-8 flex gap-4 sm:gap-8">
-              {Links.map(({ id, href, icon }) => (
-                <a
-                  href={href}
-                  target="__blank"
-                  key={id}
-                  className="hover:scale-105 duration-300 text-gray-400 hover:text-indigo-500 dark:hover:text-indigo-400 cursor-pointer rounded-lg bg-gray-50 dark:bg-ternary-dark hover:bg-gray-100 shadow-sm p-4"
-                >
-                  <i className="text-xl sm:text-2xl md:text-3xl">{icon}</i>
-                </a>
-              ))}
-            </ul>
-          </div>
+          <p className="mt-6 text-xl text-gray-400">
+            Feel free to connect on social media.
+          </p>
+          <div className="flex flex-col md:flex-row justify-between items-start md:items-center">
+            <div className="font-general-regular flex flex-col justify-center items-center">
+              <ul className="pt-8 flex gap-4 sm:gap-8">
+                {Links.map(({ id, href, icon }) => (
+                  <a
+                    href={href}
+                    target="__blank"
+                    key={id}
+                    className="hover:scale-105 duration-300 text-gray-400 hover:text-indigo-500 dark:hover:text-indigo-400 cursor-pointer rounded-lg bg-gray-50 dark:bg-ternary-dark hover:bg-gray-100 shadow-sm p-4"
+                  >
+                    <i className="text-xl sm:text-2xl md:text-3xl">{icon}</i>
+                  </a>
+                ))}
+              </ul>
+            </div>
             <div className="flex flex-col justify-center items-start mt-6 md:mt-0">
               <p className="text-2xl sm:text-3xl text-white font-signature cursor-context-menu">
                 Hamza Yasir
@@ -61,7 +63,26 @@ const Footer = () => {
                 <LiaAddressBookSolid size={25} />: Karachi, Pakistan
               </p>
             </div>
-			</div>
+          </div>
+        </div>
+        <div className="mt-5 font-general-regular flex justify-center items-center text-center">
+          <div className="text-lg text-gray-400">
+            &copy; {new Date().getFullYear()}
+            <a
+              href="https://hamza-yasir-my-portfolio.vercel.app/"
+              target="__blank"
+              className="hover:underline hover:text-indigo-600 dark:hover:text-indigo-300 ml-1 duration-500"
+            >
+              React & Tailwind CSS Portfolio
+            </a>
+            <a
+              href="https://github.com/HaMza0718"
+              target="__blank"
+              className="text-gray-400 font-medium uppercase hover:underline hover:text-indigo-600 dark:hover:text-indigo-300 ml-1 duration-500"
+            >
+              Hamza.
+            </a>
+          </div>
         </div>
       </div>
     </div>

@@ -28,7 +28,7 @@ const Header = () => {
     },
   ];
   return (
-    <div className="flex justify-between items-center w-full h-16 px-4 text-white bg-gradient-to-b from-black to-gray-900 fixed z-50">
+    <div className="flex justify-between items-center w-full h-16 px-4 text-white bg-gradient-to-r from-gray-900 via-gray-800 to-gray-900 fixed z-50">
       <div>
         <h1 className="text-3xl sm:text-3xl ml-2 font-signature cursor-context-menu hover:scale-75">
           H..Y
