@@ -1,7 +1,7 @@
 import React from "react";
 import { FiGithub, FiLinkedin } from "react-icons/fi";
 import { AiOutlineInstagram, AiOutlineMail } from "react-icons/ai";
-import { BiPhoneCall } from "react-icons/bi";
+import { BiLogoWhatsapp } from "react-icons/bi";
 import { LiaAddressBookSolid } from "react-icons/lia";
 
 const Footer = () => {
@@ -56,10 +56,10 @@ const Footer = () => {
               <p className="text-2xl sm:text-3xl text-white font-signature cursor-context-menu">
                 Hamza Yasir
               </p>
-              <p className="py-2 text-xl text-gray-500 flex items-center">
-                <BiPhoneCall size={25} />: +9234-72086321
+              <p className="py-2 text-xl text-gray-500 flex items-center hover:text-white duration-200">
+                <BiLogoWhatsapp size={25} />: +9234-72086321
               </p>
-              <p className="text-xl text-gray-500 flex items-center">
+              <p className="text-xl text-gray-500 flex items-center hover:text-white duration-200">
                 <LiaAddressBookSolid size={25} />: Karachi, Pakistan
               </p>
             </div>

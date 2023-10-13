@@ -49,9 +49,9 @@ const Projects = () => {
   return (
     <div
       name="projects"
-      className="w-full md:h-screen projects"
+      className="w-full h-screen projects"
     >
-      <div className="max-w-screen-xl p-0 sm:p-4 mx-auto flex flex-col justify-center w-full h-full">
+      <div className="max-w-screen-xl p-4 sm:px-16 mx-auto flex flex-col justify-center w-full h-full">
         <div className="pb-4">
           <p className="text-3xl sm:text-4xl text-white font-bold inline border-b-4 border-gray-600">
             Projects
