@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { FaBars, FaTimes } from "react-icons/fa";
 import { Link } from "react-scroll";
+import "../index.css";
 
 const Header = () => {
   const [nav, setNav] = useState(false);
@@ -50,7 +51,7 @@ const Header = () => {
         {nav ? <FaTimes size={25} /> : <FaBars size={25} />}
       </div>
       {nav && (
-        <ul className="flex flex-col justify-center items-center absolute top-5 right-5 bg-gradient-to-t from-gray-800 to-black text-gray-300 rounded-xl">
+        <ul className="flex flex-col justify-center items-center absolute top-16 right-8 bg-gradient-to-t from-gray-800 to-black text-gray-300 rounded-xl">
           {links.map(({ id, link }) => (
             <li key={id} className="px-8 cursor-pointer capitalize py-4 text-3xl sm:text-4xl">
               <Link
@@ -65,7 +66,7 @@ const Header = () => {
           ))}
         </ul>
       )}
-    </div> 
+    </div>
   );
 };
 
