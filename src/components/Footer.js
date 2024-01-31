@@ -1,8 +1,9 @@
 import React from "react";
 import { FiGithub, FiLinkedin } from "react-icons/fi";
 import { AiOutlineInstagram, AiOutlineMail } from "react-icons/ai";
-import { BiLogoWhatsapp } from "react-icons/bi";
+import { MdOutlineAddIcCall } from "react-icons/md";
 import { LiaAddressBookSolid } from "react-icons/lia";
+import whatsappLogo from "../assets/whatsappLogo.png";
 
 const Footer = () => {
   const Links = [
@@ -57,7 +58,8 @@ const Footer = () => {
                 Hamza Yasir
               </p>
               <p className="py-2 text-xl text-gray-500 flex items-center hover:text-white duration-200">
-                <BiLogoWhatsapp size={25} />: +9234-72086321
+                <MdOutlineAddIcCall size={25} />{" "}
+                <a href="tel:+9234-72086321">+9234-72086321</a>
               </p>
               <p className="text-xl text-gray-500 flex items-center hover:text-white duration-200">
                 <LiaAddressBookSolid size={25} />: Karachi, Pakistan
@@ -84,6 +86,11 @@ const Footer = () => {
             </a>
           </div>
         </div>
+      </div>
+      <div className="whatsapp-logo hover:scale-95">
+        <a href="https://wa.me/923472086321" target="_blank">
+          <img src={whatsappLogo} width="50" alt="" />
+        </a>
       </div>
     </div>
   );

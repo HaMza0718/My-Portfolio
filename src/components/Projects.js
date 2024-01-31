@@ -4,7 +4,7 @@ import fashioNova from "../assets/portfolio/fashionNova.PNG";
 import foodTime from "../assets/portfolio/foodTime.PNG";
 import hulu from "../assets/portfolio/hulu.PNG";
 import realState from "../assets/portfolio/realState.PNG";
-import travelista from "../assets/portfolio/travelista.PNG";
+import snapLeather from "../assets/portfolio/snapLeather.PNG";
 
 const Projects = () => {
   const projects = [
@@ -16,9 +16,9 @@ const Projects = () => {
     },
     {
       id: 2,
-      src: travelista,
-      demo: "https://hamza0718.github.io/Travelista/",
-      code: "https://github.com/HaMza0718/Travelista",
+      src: snapLeather,
+      demo: "https://snapleather-leathercollection.netlify.app/",
+      code: "https://github.com/HaMza0718/Leather_Collection",
     },
     {
       id: 3,

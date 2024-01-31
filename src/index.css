@@ -82,6 +82,13 @@ body {
     margin-top: 12%;
 }
 
+.whatsapp-logo {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 2;
+}
+
 @media screen and (max-width: 900px) {
 
     #root {
@@ -97,9 +104,10 @@ body {
         height: 100%;
     }
 
-    .home{
+    .home {
         padding-top: 30%;
     }
+
     .about,
     .projects,
     .skills {
