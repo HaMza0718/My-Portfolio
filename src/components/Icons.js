@@ -30,7 +30,7 @@ const Icons = () => {
           Resume <BsFillPersonLinesFill size={30} />
         </>
       ),
-      href: "https://drive.google.com/file/d/1Ks7KUmQFckJWL5aGKP2aTjrciAJHIQPQ/view?usp=sharing",
+      href: "https://drive.google.com/file/d/1yIoDhqNwKdmHg5wIErrYgOuK-Suc4veW/view?usp=sharing",
     },
   ];
   return (
