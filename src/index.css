@@ -1,116 +1,175 @@
-@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&family=Poppins:wght@300&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;1,100;1,200;1,300;1,400;1,500;1,600&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Great+Vibes&family=Poppins:wght@300;400;500;600;700&display=swap");
 
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 @layer base {
-    html {
-        font-family: 'Poppins', sans-serif;
-    }
-}
-
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  html {
+    font-family: "Poppins", sans-serif;
     scroll-behavior: smooth;
-}
+    scroll-padding-top: 4rem;
+  }
 
-#root {
+  @media (prefers-reduced-motion: reduce) {
+    html {
+      scroll-behavior: auto;
+    }
+
+    *,
+    *::before,
+    *::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+      scroll-behavior: auto !important;
+    }
+  }
+
+  body {
+    margin: 0;
+    background-color: #0b1220;
+    color: #e2e8f0;
+    overflow-x: hidden;
+  }
+
+  #root {
     min-height: 100vh;
-    background: linear-gradient(to bottom, #1f2a35, #000000);
+    background: linear-gradient(180deg, #0b1220 0%, #0f172a 45%, #020617 100%);
+  }
+
+  img {
+    max-width: 100%;
+    height: auto;
+  }
 }
 
-body {
-    background: rgb(31, 44, 61)
+@layer components {
+  .section-shell {
+    @apply w-full px-4 sm:px-6 lg:px-8 py-16 md:py-20;
+  }
+
+  .section-inner {
+    @apply max-w-6xl mx-auto w-full;
+  }
+
+  .card-surface {
+    @apply rounded-xl border border-slate-700/60 bg-slate-900/50 backdrop-blur-sm;
+  }
+
+  .btn-primary {
+    @apply inline-flex items-center justify-center gap-2 rounded-lg bg-cyan-600 px-5 py-2.5 text-sm font-medium text-white transition hover:bg-cyan-500 focus:outline-none focus-visible:ring-2 focus-visible:ring-cyan-400;
+  }
+
+  .btn-secondary {
+    @apply inline-flex items-center justify-center gap-2 rounded-lg border border-slate-600 bg-slate-900/70 px-5 py-2.5 text-sm font-medium text-slate-100 transition hover:border-cyan-500/60 hover:text-cyan-300 focus:outline-none focus-visible:ring-2 focus-visible:ring-cyan-400;
+  }
+
+  .btn-standard {
+    @apply relative inline-flex items-center justify-center overflow-hidden rounded-md border border-b-4 border-neutral-400 px-6 py-2 text-center font-medium text-gray-200 outline-none duration-300 hover:border-b hover:border-t-4 hover:brightness-150 active:opacity-75;
+  }
+
+  .btn-standard::after {
+    content: "";
+    @apply pointer-events-none absolute -top-[150%] left-0 h-[5px] w-80 rounded-md bg-neutral-400 opacity-50 shadow-[0_0_10px_10px_rgba(0,0,0,0.3)] shadow-neutral-400 duration-500;
+  }
+
+  .btn-standard:hover::after {
+    top: 150%;
+  }
+
+  .skill-chip {
+    @apply inline-flex items-center rounded-md border border-slate-700 bg-slate-800/70 px-3 py-1.5 text-sm text-slate-200 transition hover:border-cyan-500/50 hover:text-cyan-300;
+  }
+
+  .nav-link-active {
+    @apply text-cyan-400;
+  }
+
+  .project-placeholder {
+    background:
+      radial-gradient(circle at 20% 20%, rgba(34, 211, 238, 0.18), transparent 40%),
+      radial-gradient(circle at 80% 30%, rgba(59, 130, 246, 0.16), transparent 45%),
+      linear-gradient(145deg, #0f172a, #111827 55%, #0b1220);
+  }
 }
 
-/* animation key */
 @keyframes spin01 {
-    0% {
-        transform: rotate(0deg);
-    }
+  0% {
+    transform: rotate(0deg);
+  }
 
-    100% {
-        transform: rotate(360deg);
-    }
+  100% {
+    transform: rotate(360deg);
+  }
 }
 
-.cont-img>.img-box {
-    position: relative;
+.cont-img > .img-box {
+  position: relative;
 }
 
-.cont-img>.img-box::before {
-    content: '';
-    position: absolute;
-    height: 100px;
-    width: 100px;
-    border: 3px dotted gray;
-    left: calc(17% - 22px);
-    top: calc(50% - 50px);
-    animation: spin01 10s linear infinite;
+.cont-img > .img-box::before {
+  content: "";
+  position: absolute;
+  height: 100px;
+  width: 100px;
+  border: 3px dotted gray;
+  left: calc(17% - 22px);
+  top: calc(50% - 50px);
+  animation: spin01 10s linear infinite;
 }
 
-.cont-img>.img-box p {
-    position: absolute;
-    left: 22%;
-    top: 50%;
-    width: 100%;
-    max-width: 250px;
-    text-align: center;
-    transform: translate(-50%, -50%);
-    font-size: 35px;
-    font-family: 'Great Vibes', cursive;
-    font-weight: bold;
-    color: white;
+.cont-img > .img-box p {
+  position: absolute;
+  left: 22%;
+  top: 50%;
+  width: 100%;
+  max-width: 250px;
+  text-align: center;
+  transform: translate(-50%, -50%);
+  font-size: 35px;
+  font-family: "Great Vibes", cursive;
+  font-weight: bold;
+  color: white;
 }
 
 .about,
 .contact {
-    overflow: hidden;
+  overflow: hidden;
 }
 
 .projects,
 .contact {
-    margin-top: 8%;
-
-}
-
-.skills {
-    margin-top: 12%;
+  margin-top: 8%;
 }
 
 .whatsapp-logo {
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
-    z-index: 2;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 40;
 }
 
-@media screen and (max-width: 900px) {
+@media (max-width: 900px) {
+  .about,
+  .contact,
+  .projects,
+  .skills,
+  .home,
+  .footer {
+    height: 100%;
+  }
 
-    #root {
-        min-height: 100vh;
-    }
+  .about,
+  .projects,
+  .skills {
+    margin-top: 10%;
+  }
+}
 
-    .about,
-    .contact,
-    .projects,
-    .skills,
-    .home,
-    .footer {
-        height: 100%;
-    }
-
-    .home {
-        padding-top: 30%;
-    }
-
-    .about,
-    .projects,
-    .skills {
-        margin-top: 10%;
-    }
+@media (max-width: 640px) {
+  .whatsapp-logo {
+    bottom: 14px;
+    right: 14px;
+  }
 }

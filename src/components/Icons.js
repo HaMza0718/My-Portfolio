@@ -2,57 +2,53 @@ import React from "react";
 import { FaLinkedin } from "react-icons/fa";
 import { HiOutlineMail } from "react-icons/hi";
 import { BsFillPersonLinesFill } from "react-icons/bs";
+import { PROFILE } from "../data/portfolioData";
 
 const Icons = () => {
   const links = [
     {
       id: 1,
-      child: (
-        <>
-          Linkedin <FaLinkedin size={30} />
-        </>
-      ),
-      href: "https://www.linkedin.com/in/hamza-yasir-64885a230/",
+      label: "LinkedIn",
+      icon: <FaLinkedin size={24} aria-hidden="true" />,
+      href: PROFILE.linkedin,
     },
     {
       id: 2,
-      child: (
-        <>
-          Mail <HiOutlineMail size={30} />
-        </>
-      ),
-      href: "mailto:hamzayasir677@gmail.com",
+      label: "Mail",
+      icon: <HiOutlineMail size={24} aria-hidden="true" />,
+      href: `mailto:${PROFILE.email}`,
     },
     {
       id: 3,
-      child: (
-        <>
-          Resume <BsFillPersonLinesFill size={30} />
-        </>
-      ),
-      href: "https://drive.google.com/file/d/1_NDsEJC_d59KWXULBlYxYBEWZDObZcDB/view?usp=sharing",
+      label: "Resume",
+      icon: <BsFillPersonLinesFill size={24} aria-hidden="true" />,
+      href: PROFILE.cvPath,
+      download: "Hamza_Yasir_CV.pdf",
     },
   ];
+
   return (
-    <div className="hidden lg:flex flex-col top-[35%] left-0 fixed rounded-lg">
+    <aside className="fixed left-0 top-[35%] z-40 hidden lg:block" aria-label="Quick links">
       <ul>
-        {links.map(({ id, child, href }) => (
+        {links.map(({ id, label, icon, href, download }) => (
           <li
             key={id}
-            className="flex justify-between items-center w-40 h-14 px-4 bg-gradient-to-r from-gray-900 via-gray-800 to-gray-900 ml-[-100px] hover:ml-[2px] hover:rounded-md duration-300"
+            className="ml-[-100px] flex h-14 w-40 items-center justify-between bg-slate-900/95 px-4 transition duration-300 hover:ml-0 hover:rounded-r-md"
           >
             <a
               href={href}
-              className="flex justify-between items-center w-full text-white"
-              target="_blank"
-              rel="noreferrer"
+              download={download}
+              className="flex w-full items-center justify-between text-sm text-white"
+              target={href.startsWith("http") ? "_blank" : undefined}
+              rel={href.startsWith("http") ? "noopener noreferrer" : undefined}
             >
-              <>{child}</>
+              {label}
+              {icon}
             </a>
           </li>
         ))}
       </ul>
-    </div>
+    </aside>
   );
 };
 

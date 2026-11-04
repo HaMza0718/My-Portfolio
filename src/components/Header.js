@@ -1,72 +1,74 @@
 import React, { useState } from "react";
 import { FaBars, FaTimes } from "react-icons/fa";
 import { Link } from "react-scroll";
-import "../index.css";
+import { NAV_LINKS } from "../data/portfolioData";
+import { SCROLL_LINK_PROPS } from "../utils/scrollConfig";
 
 const Header = () => {
   const [nav, setNav] = useState(false);
 
-  const links = [
-    {
-      id: 1,
-      link: "home",
-    },
-    {
-      id: 2,
-      link: "about",
-    },
-    {
-      id: 3,
-      link: "skills",
-    },
-    {
-      id: 4,
-      link: "projects",
-    },
-    {
-      id: 5,
-      link: "contact",
-    },
-  ];
+  const closeNav = () => setNav(false);
+
   return (
-    <div className="flex justify-between items-center w-full h-16 px-4 text-white bg-gradient-to-r from-gray-900 via-gray-800 to-gray-900 fixed z-50">
-      <div>
-        <h1 className="text-3xl sm:text-3xl ml-2 font-signature cursor-context-menu hover:scale-75">
-          H..Y
-        </h1>
-      </div>
-      <ul className="hidden md:flex">
-        {links.map(({ id, link }) => (
-          <li key={id} className="px-4 cursor-pointer capitalize font-medium text-gray-300 hover:scale-105 hover:text-white duration-200">
-            <Link to={link} smooth duration={500}>
-              {link}
+    <header className="fixed top-0 z-50 w-full border-b border-slate-800/80 bg-navy-900/90 backdrop-blur-md">
+      <div className="mx-auto flex h-16 max-w-6xl items-center justify-between px-4 sm:px-6 lg:px-8">
+        <Link
+          to="home"
+          {...SCROLL_LINK_PROPS}
+          className="cursor-pointer font-signature text-3xl text-white transition hover:text-cyan-400"
+          aria-label="Go to home"
+        >
+          H.Y
+        </Link>
+
+        <nav className="hidden items-center gap-1 md:flex" aria-label="Primary">
+          {NAV_LINKS.map(({ id, link, label }) => (
+            <Link
+              key={id}
+              to={link}
+              {...SCROLL_LINK_PROPS}
+              className="cursor-pointer rounded-md px-3 py-2 text-sm font-medium capitalize text-slate-300 transition hover:text-white"
+            >
+              {label}
             </Link>
-          </li>
-        ))}
-      </ul>
-      <div
-        onClick={() => setNav(!nav)}
-        className="cursor-pointer pr-1 z-10 text-gray-300 md:hidden"
-      >
-        {nav ? <FaTimes size={25} /> : <FaBars size={25} />}
-      </div>
-      {nav && (
-        <ul className="flex flex-col justify-center items-center absolute top-16 right-8 bg-gradient-to-t from-gray-800 to-black text-gray-300 rounded-xl">
-          {links.map(({ id, link }) => (
-            <li key={id} className="px-8 cursor-pointer capitalize py-4 text-3xl sm:text-4xl">
-              <Link
-                onClick={() => setNav(!nav)}
-                to={link}
-                smooth
-                duration={500}
-              >
-                {link}
-              </Link>
-            </li>
           ))}
-        </ul>
+        </nav>
+
+        <button
+          type="button"
+          onClick={() => setNav((open) => !open)}
+          className="rounded-md p-2 text-slate-300 transition hover:text-white md:hidden"
+          aria-expanded={nav}
+          aria-controls="mobile-nav"
+          aria-label={nav ? "Close menu" : "Open menu"}
+        >
+          {nav ? <FaTimes size={22} /> : <FaBars size={22} />}
+        </button>
+      </div>
+
+      {nav && (
+        <nav
+          id="mobile-nav"
+          className="border-t border-slate-800 bg-navy-800 md:hidden"
+          aria-label="Mobile"
+        >
+          <ul className="flex flex-col px-4 py-3">
+            {NAV_LINKS.map(({ id, link, label }) => (
+              <li key={id}>
+                <Link
+                  onClick={closeNav}
+                  to={link}
+                  {...SCROLL_LINK_PROPS}
+                  className="block cursor-pointer rounded-md px-3 py-3 text-base capitalize text-slate-300 transition hover:bg-slate-800 hover:text-white"
+                >
+                  {label}
+                </Link>
+              </li>
+            ))}
+          </ul>
+        </nav>
       )}
-    </div>
+    </header>
   );
 };
 
