@@ -21,7 +21,7 @@ const Projects = () => (
       </h3>
 
       <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-        {PERSONAL_PROJECTS.map(({ id, src, demo, code }, index) => (
+        {PERSONAL_PROJECTS.map(({ id, src, demo }, index) => (
           <motion.article
             key={id}
             {...FADE_UP}
@@ -42,14 +42,6 @@ const Projects = () => (
                 className="btn-standard flex-1"
               >
                 Live Demo
-              </a>
-              <a
-                href={code}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="btn-secondary relative flex-1"
-              >
-                Source Code
               </a>
             </div>
           </motion.article>

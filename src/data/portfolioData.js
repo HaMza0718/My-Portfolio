@@ -16,7 +16,7 @@ export const PROFILE = {
   location: "Karachi, Pakistan",
   linkedin: "https://www.linkedin.com/in/hamza-yasir-64885a230/",
   github: "https://github.com/HaMza0718",
-  cvPath: "/Hamza_Yasir_CV.pdf",
+  cvPath: "https://drive.google.com/file/d/1GJTGjJwvg_CG6YPtvAG-5jYi4Xbfm4JK/view?usp=sharing",
   whatsapp: "https://wa.me/923472086321",
 };
 
@@ -171,7 +171,7 @@ export const ENTERPRISE_PROJECTS = [
   },
   {
     id: 2,
-    title: "The Private Office (TPO) Department Dashboards",
+    title: "The Private Office (TPO)",
     client: null,
     featured: false,
     accent: "from-blue-500/20 to-indigo-600/10",
@@ -192,7 +192,7 @@ export const ENTERPRISE_PROJECTS = [
   },
   {
     id: 3,
-    title: "Tulloch Barcode Tracking System",
+    title: "Tulloch Tracking System",
     client: null,
     featured: false,
     accent: "from-teal-500/20 to-cyan-600/10",
@@ -212,7 +212,7 @@ export const ENTERPRISE_PROJECTS = [
   },
   {
     id: 4,
-    title: "CCI Attendance Management System",
+    title: "Attendance Management System",
     client: null,
     featured: false,
     accent: "from-sky-500/20 to-blue-700/10",
@@ -238,37 +238,31 @@ export const PERSONAL_PROJECTS = [
     id: 1,
     src: realState,
     demo: "https://real-estate-react-web-app.vercel.app/",
-    code: "https://github.com/HaMza0718/RealEstate-WebApp",
   },
   {
     id: 2,
     src: snapLeather,
     demo: "https://snapleather-leathercollection.netlify.app/",
-    code: "https://github.com/HaMza0718/Leather_Collection",
   },
   {
     id: 3,
     src: foodTime,
     demo: "https://hamza0718.github.io/Food-Time/",
-    code: "https://github.com/HaMza0718/Food-Time",
   },
   {
     id: 4,
     src: hulu,
     demo: "https://hulu-2-0-nextjs-beta.vercel.app/",
-    code: "https://github.com/HaMza0718/Hulu_2.0",
   },
   {
     id: 5,
     src: fashionNova,
     demo: "https://fashion-nova-ecommerce-store.netlify.app/",
-    code: "https://github.com/HaMza0718/Shopping_Cart",
   },
   {
     id: 6,
     src: blogApp,
     demo: "https://blog-app-reactjs-firebase.netlify.app/",
-    code: "https://github.com/HaMza0718/Blog-App",
   },
 ];
 
@@ -291,7 +285,7 @@ export const CERTIFICATIONS = [
   {
     id: 4,
     title: "Intermediate SQL Queries",
-    href: null,
+    href: '',
   },
 ];
 
