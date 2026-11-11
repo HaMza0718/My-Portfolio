@@ -14,7 +14,7 @@ const Projects = () => (
     <div className="section-inner">
       <SectionHeading
         title="Personal & Frontend Projects"
-        subtitle="Selected personal frontend builds with live demos and source code."
+        subtitle="Selected personal frontend builds with live demos."
       />
       <h3 id="personal-projects-heading" className="sr-only">
         Personal frontend projects
